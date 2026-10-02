@@ -1,0 +1,133 @@
+.titulo {
+    color: #FFFFFF;
+    font-weight: 900;
+    font-size: x-large;
+    text-align: center;
+}
+
+.tarjeta {
+    width: 100%;
+    max-width: 600px;
+    background-color: #2563EB;
+    border-radius: 30px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.subtitulos {
+    color: #DBEAFE;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.titulotiempo {
+    font-size: 13px;
+    font-weight: bold;
+    color: rgb(242, 247, 242);
+}
+
+.btn-calcular,
+.btn-reiniciar {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 13vh;
+    min-height: 60px;
+    margin: 20px auto;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(242, 247, 242);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: pulso 2s infinite;
+}
+
+.btn-calcular {
+    background-color: blue;
+}
+
+.btn-reiniciar {
+    background-color: #dc2626;
+}
+
+.btn-calcular:hover,
+.btn-reiniciar:hover {
+    transform: translateY(-4px) scale(1.05);
+    animation: none;
+}
+
+.btn-calcular:hover {
+    background-color: #1e40af;
+    box-shadow: 0 8px 20px rgba(0, 0, 255, 0.5);
+}
+
+.btn-reiniciar:hover {
+    background-color: #991b1b;
+    box-shadow: 0 8px 20px rgba(220, 38, 38, 0.5);
+}
+
+.btn-calcular:active,
+.btn-reiniciar:active {
+    transform: translateY(0) scale(0.95);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.btn-calcular:before,
+.btn-reiniciar:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.6s ease;
+}
+
+.btn-calcular:hover:before,
+.btn-reiniciar:hover:before {
+    left: 120%;
+}
+
+@keyframes pulso {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.6);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.resultado-animado {
+    animation: aparecer 0.5s ease;
+}
+
+.btn-reiniciar {
+    height: 8vh;
+    margin-top: 25PX;
+}
